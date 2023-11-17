@@ -39,7 +39,13 @@ class JoinForm extends StatelessWidget {
             controller: _password,
           ),
           const SizedBox(height: largeGap),
-          CustomElevatedButton(text: "회원가입", funPageRoute: () {}),
+          CustomElevatedButton(
+              text: "회원가입",
+              funPageRoute: () {
+                if (_formKey.currentState!.validate()) {
+                  //Navigator.popAndPushNamed(context, Move.postListPage);
+                }
+              }),
         ],
       ),
     );
